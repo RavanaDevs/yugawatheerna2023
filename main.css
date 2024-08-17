@@ -66,53 +66,115 @@ body {
   background-size: 70%;
   background-position: center center;
   animation: logo-open 4s linear, logo-to-top 0.5s linear 6s forwards;
-  
 }
 
-.main-section{
-    position: absolute;
+.main-section {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  opacity: 0;
+  animation: fade-in 1s linear 6s forwards;
+}
+
+.batch-photo {
+  width: 490px;
+  height: 340px;
+  margin-top: 25px;
+  outline: 5px solid white;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-image: url("img/placeholder.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.placeholder{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    height: 80%;
-    opacity: 0;
-    animation: fade-in 1s linear 6s forwards
+    height: 100%;
+    background-color: black;
+    opacity: 80%;
 }
 
-.batch-photo{
-    width: 490px;
-    height: 340px;
-    margin-top: 25px;
-    outline: 5px solid white;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-image: url("img/placeholder.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
-}
-
-.btn{
-    padding: 15px 80px;
-    font-size: large;
+.placeholder p{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    border-radius: 10px;
-    border: none;
+    font-size: 24px;
+    text-align: center;
 }
 
-.btn:hover{
-    background-color: antiquewhite;
+.btn {
+  padding: 15px 80px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
 }
 
-.credits{
-    width: 400px;
-    height: 100px;
-    background-image: url("img/credit.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
+.btn:hover {
+  background-color: antiquewhite;
+}
+
+.credits {
+  width: 400px;
+  height: 100px;
+  background-image: url("img/credit.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center center;
+}
+
+@media (max-width: 435px) {
+  /* Animations */
+  @keyframes logo-open-mobile {
+    0% {
+      background-size: 140%;
+    }
+
+    100% {
+      background-size: 90%;
+    }
+  }
+
+  @keyframes logo-to-top-mobile {
+    0% {
+      background-position: center center;
+    }
+
+    100% {
+      background-position: center -50px;
+    }
+  }
+
+  .background {
+    background-size: cover;
+    background-position: right bottom;
+  }
+  .logo {
+    background-size: 90%;
     background-position: center center;
+    animation: logo-open-mobile 4s linear, logo-to-top-mobile 0.5s linear 5s forwards;
+    /* animation: logo-open-mobile 4s linear logo-to-top-mobile 0.5s linear 6s forwards; */
+  }
+  .main-section {
+  }
+  .batch-photo {
+    width: 350px;
+    height: 196px;
+  }
+  .btn {
+  }
+
+  .credits {
+    width: 100%;
+  }
 }
