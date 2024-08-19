@@ -83,13 +83,13 @@ body {
 }
 
 .batch-photo {
-  width: 490px;
+  width: 510px;
   height: 340px;
   margin-top: 25px;
   outline: 5px solid white;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-image: url("img/placeholder.jpg");
+  background-image: url("img/batch-photo-21-22.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
